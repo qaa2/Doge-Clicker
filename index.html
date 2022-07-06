@@ -57,7 +57,7 @@ img {
   <h3>Created By Yudz</h3>
   <h5>(DPC: Doges Per Click, DPS: Doges Per Second)</h5>
   <img src='https://doge-clicker.yudzdoge.repl.co/image.png' onclick='got_clicked()' width='300px' height='300px' />
-  <h1 id='score'>Doges: Loading...</h1>
+  <h1 id='score'>Doges: Loading..., DPC: Loading..., DPS: Loading...</h1>
   <div id='upgrades'>
     <button onclick='upgrade()'>Buy Extra Fur +0.5 DPC (cost: 15)</button>
     <button onclick='upgrade_cps()'>Buy Nice Nose +0.5 DPS (cost: 25)</button>
@@ -107,7 +107,7 @@ function got_clicked() {
   console.log("Got Clicked")
   score += spc;
   saveState();
-  document.getElementById('score').innerHTML = "Doges: " + score;
+  document.getElementById('score').innerHTML = "Doges: " + score + ", DPC: " + spc + ", DPS: " + cps;
 }
 
 function upgrade() {
@@ -115,7 +115,7 @@ function upgrade() {
     spc += 0.5
     score -= 10;
     saveState();    
-    document.getElementById('score').innerHTML = "Doges: " + score;
+    document.getElementById('score').innerHTML = "Doges: " + score + ", DPC: " + spc + ", DPS: " + cps;
   }
 }
 function upgrade_cps() {
@@ -123,7 +123,7 @@ function upgrade_cps() {
     cps += 0.5
     score -= 25;
     saveState();
-    document.getElementById('score').innerHTML = 'Doges: ' + score;
+    document.getElementById('score').innerHTML = 'Doges: ' + score + ", DPC: " + spc + ", DPS: " + cps;
   }
 }
 function upgradeone() {
@@ -131,7 +131,7 @@ function upgradeone() {
     spc += 1
     score -= 50;
     saveState();
-    document.getElementById('score').innerHTML = "Doges: " + score;
+    document.getElementById('score').innerHTML = "Doges: " + score + ", DPC: " + spc + ", DPS: " + cps;
   }
 }
 function upgrade_cpsone() {
@@ -139,7 +139,7 @@ function upgrade_cpsone() {
     cps += 1
     score -= 100;
     saveState();
-    document.getElementById('score').innerHTML = 'Doges: ' + score;
+    document.getElementById('score').innerHTML = 'Doges: ' + score + ", DPC: " + spc + ", DPS: " + cps;
   }
 }
 function upgradetwo() {
@@ -147,7 +147,7 @@ function upgradetwo() {
     spc += 2.5
     score -= 200;
     saveState();
-    document.getElementById('score').innerHTML = "Doges: " + score;
+    document.getElementById('score').innerHTML = "Doges: " + score + ", DPC: " + spc + ", DPS: " + cps;
   }
 }
 function upgrade_cpstwo() {
@@ -155,7 +155,7 @@ function upgrade_cpstwo() {
     cps += 2.5
     score -= 250;
     saveState();
-    document.getElementById('score').innerHTML = 'Doges: ' + score;
+    document.getElementById('score').innerHTML = 'Doges: ' + score + ", DPC: " + spc + ", DPS: " + cps;
   }
 }
 function upgradethree() {
@@ -163,7 +163,7 @@ function upgradethree() {
     spc += 5
     score -= 500;
     saveState();
-    document.getElementById('score').innerHTML = "Doges: " + score;
+    document.getElementById('score').innerHTML = "Doges: " + score + ", DPC: " + spc + ", DPS: " + cps;
   }
 }
 function upgrade_cpsthree() {
@@ -171,13 +171,13 @@ function upgrade_cpsthree() {
     cps += 5
     score -= 750
     saveState();
-    document.getElementById('score').innerHTML = 'Doges: ' + score;
+    document.getElementById('score').innerHTML = 'Doges: ' + score + ", DPC: " + spc + ", DPS: " + cps;
   }
 }
 setInterval(function() {
   score += cps;
   saveState();
-  document.getElementById('score').innerHTML = "Doges: " + score;
+  document.getElementById('score').innerHTML = "Doges: " + score + ", DPC: " + spc + ", DPS: " + cps;
 }, 1000)
 	  </script>
 </body>
