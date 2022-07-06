@@ -105,8 +105,24 @@ function saveState() {
 }
 
 function goBack() {
+                // Create anchor element.
                 var a = document.createElement('a'); 
-                 a.href = "https://www.geeksforgeeks.org"; 
+                  
+                // Create the text node for anchor element.
+                var link = document.createTextNode("This is link");
+                  
+                // Append the text node to anchor element.
+                a.appendChild(link); 
+                  
+                // Set the title.
+                a.title = "This is Link"; 
+                  
+                // Set the href property.
+                a.href = "https://www.geeksforgeeks.org"; 
+                  
+                // Append the anchor element to the body.
+                document.body.appendChild(a);
+}
 function got_clicked() {
   console.log("Got Clicked")
   score += spc;
