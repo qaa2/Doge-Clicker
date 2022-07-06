@@ -53,7 +53,7 @@ img {
 </head>
 
 <body>
-	<h4>Go Back<h4>
+	 <button onclick='goBack()'>Go Back</button>
   <h1>Doge Clicker</h1>
   <h3>Created By Yudz</h3>
   <h5>(DPC: Doges Per Click, DPS: Doges Per Second)</h5>
@@ -104,6 +104,9 @@ function saveState() {
   localStorage.setItem("score", score)
 }
 
+function goBack() {
+                var a = document.createElement('a'); 
+                 a.href = "https://www.geeksforgeeks.org"; 
 function got_clicked() {
   console.log("Got Clicked")
   score += spc;
