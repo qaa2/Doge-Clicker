@@ -53,7 +53,7 @@ img {
 </head>
 
 <body>
-	 <button onclick='goBack()'>Go Back</button>
+	 <a href= “http://yudz.ga/games”>Go Back</a>
   <h1>Doge Clicker</h1>
   <h3>Created By Yudz</h3>
   <h5>(DPC: Doges Per Click, DPS: Doges Per Second)</h5>
@@ -104,25 +104,7 @@ function saveState() {
   localStorage.setItem("score", score)
 }
 
-function goBack() {
-                // Create anchor element.
-                var a = document.createElement('a'); 
-                  
-                // Create the text node for anchor element.
-                var link = goBack()
-                  
-                // Append the text node to anchor element.
-                a.appendChild(link); 
-                  
-                // Set the title.
-                a.title = "This is Link"; 
-                  
-                // Set the href property.
-                a.href = "https://www.geeksforgeeks.org"; 
-                  
-                // Append the anchor element to the body.
-                document.body.appendChild(a);
-}
+
 function got_clicked() {
   console.log("Got Clicked")
   score += spc;
