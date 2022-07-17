@@ -69,7 +69,9 @@ img {
     <button onclick='upgradetwo()'>Buy Super Doge Ears +2.5 DPC (cost: 200)</button>
     <button onclick='upgrade_cpstwo()'>Buy Amazing Eyesight +2.5 DPS (cost: 250)</button>
     <button onclick='upgradethree()'>Buy Root Beer +5 DPC (cost: 500)</button>
-    <button onclick='upgrade_cpsthree()'>Buy Vibes Certificate +5 DPS (cost: 750)</button>
+    <button onclick='upgrade_cpsthree()'>Buy Vibes Pass +5 DPS (cost: 750)</button>
+    <button onclick='upgradefour()'>Buy A Trainer +7.5 DPC (cost: 750)</button>
+    <button onclick='upgrade_cpsfour()'>Buy Stonks +7.5 DPS (cost: 1k)</button>
     <script>
 	    let score = 0;
 let spc = 1;
@@ -174,6 +176,21 @@ function upgrade_cpsthree() {
   if (score >= 750) {
     cps += 5
     score -= 750
+    saveState();
+    document.getElementById('score').innerHTML = 'Doges: ' + score + ", DPC: " + spc + ", DPS: " + cps;
+  }
+  function upgradefour() {
+  if (score >= 750) {
+    spc += 7.5
+    score -= 750;
+    saveState();
+    document.getElementById('score').innerHTML = "Doges: " + score + ", DPC: " + spc + ", DPS: " + cps;
+  }
+}
+function upgrade_cpsfour() {
+  if (score >= 1000) {
+    cps += 7.5
+    score -= 1000
     saveState();
     document.getElementById('score').innerHTML = 'Doges: ' + score + ", DPC: " + spc + ", DPS: " + cps;
   }
