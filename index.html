@@ -119,6 +119,7 @@ function got_clicked() {
 }
 function reset() {
 	let reset = prompt(`Will you really reset your stats? (Type "I will delete all my stats") to delete`)
+	reset
 	if (reset == "I will delete all my stats") {
 		localStorage.clear()
 		alert('Stats cleared!')
