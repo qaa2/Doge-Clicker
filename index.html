@@ -62,6 +62,7 @@ img {
   <img src='https://doge-clicker.yudzdoge.repl.co/image.png' onclick='got_clicked()' width='300px' height='300px' />
   <h1 id='score'>Doges: Loading..., DPC: Loading..., DPS: Loading...</h1>
   <div id='upgrades'>
+    <button onclick='reset()'>Reset Stats (Please select this option if your score is not loading)</button>
     <button onclick='upgrade()'>Buy Extra Fur +0.5 DPC (cost: 15)</button>
     <button onclick='upgrade_cps()'>Buy Nice Nose +0.5 DPS (cost: 25)</button>
     <button onclick='upgradeone()'>Buy Hot Shades +1 DPC (cost: 50)</button>
@@ -116,7 +117,15 @@ function got_clicked() {
   saveState();
   document.getElementById('score').innerHTML = "Doges: " + score + ", DPC: " + spc + ", DPS: " + cps;
 }
-
+function reset() {
+	let reset = prompt(`Will you really reset your stats? (Type "I will delete all my stats") to delete`)
+	if (reset == "I will delete all my stats") {
+		localStorage.clear()
+		alert('Stats cleared!')
+	} else {
+	alert(`Didn't clear stats`)
+	}
+}
 function upgrade() {
   if (score >= 10) {
     spc += 0.5
